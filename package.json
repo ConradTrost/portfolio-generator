@@ -1,0 +1,27 @@
+{
+  "name": "app.js",
+  "version": "1.0.0",
+  "description": "HTML Node.js Template",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/retro1967/portfolio-generator.git"
+  },
+  "keywords": [
+    "node",
+    "node.js",
+    "template"
+  ],
+  "author": "Conrad Trost",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/retro1967/portfolio-generator/issues"
+  },
+  "homepage": "https://github.com/retro1967/portfolio-generator#readme",
+  "dependencies": {
+    "inquirer": "^7.1.0"
+  }
+}
