@@ -44,14 +44,25 @@ const promptUser = () => {
         }
     },
     {
+        type: 'confirm',
+        name: 'confirmAbout',
+        message: 'Would you like to enter some information about yourself?',
+        default: true
+    },
+    {
         type: 'input',
         name: 'about',
-        message: 'Provide some information about yourself:'
+        message: 'Provide some information about yourself:',
+        when: ({confirmAbout }) => confirmAbout
     }
     ]);
 };
 
 const promptProject = portfolioData => {
+    console.log(`
+    =======================
+       Add a New Project
+    =======================`)
     if (!portfolioData.projects) {
         portfolioData.projects = [];
     }
@@ -132,4 +143,5 @@ promptUser()
         console.log(portfolioData);
     });
 
-// Left off on 9.3.6 (Validation)
+// Left off on 9.3.7 (Save progress with Git)
+// Try to get console log to show horizontally.
