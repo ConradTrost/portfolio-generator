@@ -20,12 +20,28 @@ const promptUser = () => {
         {
         type: 'input',
         name: 'name',
-        message: 'Name:'
+        message: 'Name (required):',
+        validate: nameInput => {
+            if (nameInput) {
+                return true;
+            } else {
+                console.log('Please enter your name!');
+                return false;
+            }
+        }
     },
     {
         type: 'input',
         name: 'github',
-        message: 'Github username:'
+        message: 'Github username:',
+        validate: nameInput => {
+            if (nameInput) {
+                return true;
+            } else {
+                console.log('Please enter your Github username!');
+                return false;
+            }
+        }
     },
     {
         type: 'input',
@@ -45,12 +61,28 @@ const promptProject = portfolioData => {
         {
             type: 'input',
             name: 'name',
-            message: 'Project name:'
+            message: 'Project name:',
+            validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    console.log('Please enter the project name!');
+                    return false;
+                }
+            }
         },
         {
             type: 'input',
             name: 'description',
-            message: 'Project description (required):'
+            message: 'Project description (required):',
+            validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    console.log('Please enter the description!');
+                    return false;
+                }
+            }
         },
         {
             type: 'checkbox',
@@ -61,7 +93,15 @@ const promptProject = portfolioData => {
           {
             type: 'input',
             name: 'link',
-            message: 'Enter the GitHub link to your project. (Required)'
+            message: 'Enter the GitHub link to your project. (Required)',
+            validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    console.log('Please enter the link!');
+                    return false;
+                }
+            }
           },
           {
             type: 'confirm',
@@ -91,3 +131,5 @@ promptUser()
     .then(portfolioData => {
         console.log(portfolioData);
     });
+
+// Left off on 9.3.6 (Validation)
